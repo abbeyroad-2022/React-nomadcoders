@@ -4,21 +4,19 @@
 //import Test from "./components/Test";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //예전버전import { BrowserRouter as Router, Switch, Route,  } from 'react-router-dom'
-// import Detail from './routes/Detail';
-// import Home from './routes/Home';
+import Detail from './routes/Detail';
+import Home from './routes/Home';
 import Test2 from "./components/Test2";
 
 const App = () => {
   return (
-    // <Router basename={process.env.PUBLIC_URL}>
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/movie/:id" element={<Detail />} />
-    //   </Routes>
-    // </Router>
-    <div>
-      <Test2/>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/movieClass/" element={<Test2 />} />
+      </Routes>
+    </Router>
   )
 };
 
